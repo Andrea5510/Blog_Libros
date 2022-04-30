@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros_Detalle</title>
+</head>
+<body>
+    
+    <h1>Informacion del Libro</h1>
+
+    <p>Titulo: {{object.titulo}}</p>
+    <p>Subtitulo: {{object.subtitulo}}</p>
+    <p>Cuerpo: {{object.cuerpo}}</p>
+    <p>Creador: {{object.creador}}</p>
+    <p>Fecha_Publicacion: {{object.fecha_publicacion}}</p>
+    <img src="/media/{{object.portada}}" width="20%">
+    <p>
+        <a href="{% url 'Lista' %}">Regresar</a>
+    </p>
+
+</body>
+</html>

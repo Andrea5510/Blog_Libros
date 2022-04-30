@@ -1,0 +1,20 @@
+{% extends 'app_login/base.html' %}
+
+{% block Avatar %}
+
+    <form method="POST" enctype="multipart/form-data">
+    
+        {% csrf_token %}
+        <table class="table table-light">
+            {{form.as_table}}
+        </table>
+
+        {% if error %}
+        <p class="m-2" style="color: red;">{{error}}</p>
+        {% endif %}
+
+        <button class="btn btn-dark" type="submit">Confirmar</button>
+        <a button class="btn btn-dark" href="{% url 'Inicio' %}">Regresar</button></a>
+    </form>
+
+{% endblock Avatar %}

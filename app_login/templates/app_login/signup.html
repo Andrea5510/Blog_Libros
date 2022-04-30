@@ -1,0 +1,16 @@
+
+{% extends 'app_login/base.html' %}
+
+{% block Signup %}
+
+<div class="loginContainer">
+    <form method="POST" class="loginForm">
+        {% csrf_token %}
+        <table class="table table-light">
+            {{form.as_table}}
+        </table>
+        <button class="btn btn-dark" type="submit">Registrarse</button>
+    </form>
+</div>
+
+{% endblock Signup %}
